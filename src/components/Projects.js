@@ -16,7 +16,7 @@ const Projects = forwardRef((props, ref) => {
     {
       id: 2,
       name: "Tippyfy",
-      coordinates: [51.5074, -0.1278],
+      coordinates: [14.2350, 51.9253],
       url: "https://tippy-fy.web.app/",
       isDeployed: true, // Deployed
     },
