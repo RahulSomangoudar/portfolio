@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* General Styles */
+:root {
+  --primary-bg: #FBFBFB;
+  --secondary-bg: #E8F9FF;
+  --accent1: #C4D9FF;
+  --accent2: #C5BAFF;
+  --text-color: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: 'Arial', sans-serif;
+  background: var(--primary-bg);
+  color: var(--text-color);
+  scroll-behavior: smooth;
+}
+
+/* Flying Clouds Background */
+.clouds-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2; /* Ensures clouds stay behind all content */
+  pointer-events: none; /* Prevents interaction issues */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: var(--accent1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: var(--accent2);
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 4px;
+  background-color: var(--text-color);
+  margin: 5px;
+  border-radius: 3px;
+}
+
+/* Responsive Navbar */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: var(--accent1);
+    padding: 15px;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+/* Sections */
+section {
+  width: 100%;
+  padding: 100px 10%;
+  text-align: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Home Section */
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: left;
+  height: 100vh;
+  padding: 0 10%;
+  background: transparent; /* Ensures clouds are visible */
+}
+
+.home-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.text {
+  flex: 1;
+}
+
+.text h1 {
+  font-size: 3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.text span {
+  color: var(--accent2);
+}
+
+.text p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .home-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text {
+    text-align: center;
+  }
+
+  .image {
+    margin-top: 20px;
+  }
+
+  .home h1 {
+    font-size: 2.5rem;
+    white-space: normal;
+  }
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: var(--accent2);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+/* About Section */
+.about {
+  background: var(--secondary-bg);
+}
+
+/* Projects Section */
+.projects {
+  background: var(--primary-bg);
+}
+
+.project-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project-card {
+  background: var(--accent1);
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section */
+.contact {
+  background: var(--secondary-bg);
+}
+
+.contact p {
+  margin-bottom: 15px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 15px;
+  background: var(--accent1);
+}
+
+/* Ensure no extra margins */
+footer, section, .home, .about, .projects, .contact {
+  overflow-x: hidden;
+}
+
+/* Media Queries for Smaller Screens */
+@media screen and (max-width: 600px) {
+  section {
+    padding: 50px 5%;
+  }
+
+  .home h1 {
+    font-size: 2rem;
+    white-space: normal;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+}
+
+@keyframes moveClouds {
+  from {
+    transform: translateX(-200px);
+  }
+  to {
+    transform: translateX(100vw);
+  }
+}
+
+

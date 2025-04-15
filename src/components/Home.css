@@ -1,0 +1,107 @@
+.button-group {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #7b6ef6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+  font-weight: 500;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+  background-color: #5f52d9;
+}
+
+.resume-btn {
+  background-color: #7b6ef6;
+}
+
+.resume-btn:hover {
+  background-color: #5f52d9;
+}
+
+.flip-container {
+  width: 250px; /* Adjust to your image size */
+  height: 250px;
+  margin-right: 100px;
+}
+
+.flipper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-container:hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.front {
+  z-index: 2;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+@media screen and (max-width: 768px) {
+  .home-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center; /* NEW: center all items vertically */
+  }
+
+  .flip-container {
+    order: 1;
+    width: 100%; /* NEW: allow centering using flex */
+    margin: 0 auto 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text {
+    order: 2;
+    text-align: center;
+    margin-top: 50px;
+  }
+}
+
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  font-size: 1.8rem;
+  color: #063647;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #7b6ef6;
+}
