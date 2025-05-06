@@ -82,7 +82,7 @@ const Home = ({ projectsRef }) => {
               View My Work
             </button>
             <a
-              href="https://drive.google.com/file/d/14vgk_Qd5C3Ma3MBad1xrzKuGHUBO_PUa/view?usp=sharing"
+              href="https://drive.google.com/file/d/14VxWTusSgWk2h3vHfuPTipIGAheK2Gh4/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="btn resume-btn"
