@@ -1,0 +1,33 @@
+.animated-gradient-text {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .text-content {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: 300% auto;
+    animation: shine 8s linear infinite;
+    font-weight: bold;
+  }
+  
+  @keyframes shine {
+    0% {
+      background-position: 0% center;
+    }
+    100% {
+      background-position: 300% center;
+    }
+  }
+  
+  .gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.2;
+  }
+  
