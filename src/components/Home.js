@@ -1,6 +1,6 @@
 import React from "react";
 import profilePic from "../assets/rahul.png";
-import profilePicBack from "../assets/rahul-1.png";
+import profilePicBack from "../assets/rahul-illustration.png";
 import GradientText from "./GradientText";
 import {
   FaGithub,
